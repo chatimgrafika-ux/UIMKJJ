@@ -103,7 +103,7 @@
                 <img src="https://drive.google.com/thumbnail?id=1RIT1Gm7ICdsZruNqS0EpEK2J3PIYws5E" class="w-25 h-25 object-contain" alt="Logo" onerror="this.style.display='none'">
             </div>
             
-            <h2 class="text-2xl font-bold text-center text-gray-800 mb-2">Portal Pendataan</h2>
+            <h2 class="text-2xl font-bold text-center text-gray-800 mb-2">Portal Pendataan Mahasiswa Online</h2>
             <p class="text-xs text-center text-gray-500 mb-8 leading-relaxed">Masukkan Email dan Raqm Thalib Anda untuk masuk ke sistem Terpadu Mandub Indonesia.</p>
             
             <div class="space-y-4 mb-8">
@@ -147,15 +147,12 @@
         </div>
 
         <!-- Custom Tab Navigation -->
-        <div class="grid grid-cols-4 bg-white shadow-sm border border-gray-100 p-1.5 rounded-xl mb-6 sticky top-20 z-20 backdrop-blur-md bg-white/90 gap-1">
+        <div class="grid grid-cols-3 bg-white shadow-sm border border-gray-100 p-1.5 rounded-xl mb-6 sticky top-20 z-20 backdrop-blur-md bg-white/90 gap-1">
             <button id="tab-btn-diri" onclick="switchTab('diri')" class="flex flex-col items-center justify-center py-2 text-[10px] sm:text-xs font-bold rounded-lg bg-green-600 text-white shadow-md transition-all">
                 <i class="fas fa-address-card mb-1 text-sm"></i> Diri
             </button>
             <button id="tab-btn-akademik" onclick="switchTab('akademik')" class="flex flex-col items-center justify-center py-2 text-[10px] sm:text-xs font-bold rounded-lg text-gray-500 hover:text-green-600 hover:bg-green-50 transition-all">
                 <i class="fas fa-graduation-cap mb-1 text-sm"></i> Akademik
-            </button>
-            <button id="tab-btn-perjalanan" onclick="switchTab('perjalanan')" class="flex flex-col items-center justify-center py-2 text-[10px] sm:text-xs font-bold rounded-lg text-gray-500 hover:text-green-600 hover:bg-green-50 transition-all">
-                <i class="fas fa-passport mb-1 text-sm"></i> Dokumen
             </button>
             <button id="tab-btn-info" onclick="switchTab('info')" class="flex flex-col items-center justify-center py-2 text-[10px] sm:text-xs font-bold rounded-lg text-gray-500 hover:text-green-600 hover:bg-green-50 transition-all">
                 <i class="fas fa-info-circle mb-1 text-sm"></i> Info
@@ -327,38 +324,7 @@
                 </div>
             </div>
 
-            <!-- ======================= TAB 3: DATA PERJALANAN ======================= -->
-            <div id="tab-perjalanan" class="tab-content hidden space-y-4 animate-fade-in">
-                <h3 class="text-sm font-bold text-gray-800 mb-4 border-b pb-2 flex items-center gap-2"><i class="fas fa-passport text-green-600"></i> Identitas & Dokumen Perjalanan</h3>
-                
-                <div class="w-full" id="visa-container">
-                    <label class="text-xs font-semibold text-gray-700 mb-1 block">Status Visa <span class="text-red-500">*</span></label>
-                    <select id="f-visa" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-green-400 appearance-none">
-                        <option value="" disabled selected>Pilih Status Visa</option>
-                        <option value="Sudah terbit">Sudah terbit</option>
-                        <option value="Belum terbit">Belum terbit</option>
-                        <option value="Visa Ta'limiyah">Visa Ta'limiyah</option>
-                    </select>
-                </div>
-
-                <div class="w-full">
-                    <label class="text-xs font-semibold text-gray-700 mb-1 block">Nomor Paspor</label>
-                    <input type="text" id="f-paspor" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-green-400 uppercase font-bold tracking-wider" placeholder="CXXXXXXX">
-                </div>
-                
-                <div class="w-full relative">
-                    <label class="text-xs font-semibold text-gray-700 mb-1 block">Tanggal Expired Paspor</label>
-                    <input type="text" id="f-expired" readonly onclick="openDatePicker()" placeholder="Pilih Tanggal (dd/mm/yyyy)" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-green-400 cursor-pointer text-gray-600 font-medium">
-                    <i class="fas fa-calendar-alt absolute right-4 top-9 text-green-600 pointer-events-none"></i>
-                </div>
-                
-                <div class="w-full mt-4">
-                    <label class="text-xs font-semibold text-gray-700 mb-1 block">Raqm Iqamah</label>
-                    <input type="text" id="f-iqamah" inputmode="numeric" pattern="[0-9]*" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '')" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-green-400 font-bold tracking-widest text-center" placeholder="XXXXXXXXXX (10 digit)">
-                </div>
-            </div>
-
-            <!-- ======================= TAB 4: PUSAT INFO & BANTUAN ======================= -->
+            <!-- ======================= TAB 3: PUSAT INFO & BANTUAN ======================= -->
             <div id="tab-info" class="tab-content hidden space-y-7 animate-fade-in">
                 
                 <!-- Section: Kontak Darurat -->
@@ -689,7 +655,7 @@
         let currentThalib = '';
 
         // TABS LOGIC
-        const tabs = ['diri', 'akademik', 'perjalanan', 'info'];
+        const tabs = ['diri', 'akademik', 'info'];
         let currentTabIndex = 0;
 
         function switchTab(tabId) {
@@ -726,8 +692,8 @@
             document.getElementById('btn-prev').classList.toggle('hidden', currentTabIndex === 0);
             document.getElementById('btn-next').classList.toggle('hidden', currentTabIndex === tabs.length - 1);
             
-            // Tombol "Simpan Data" akan muncul di Tab ke-3 (Dokumen) dan Tab ke-4 (Info)
-            document.getElementById('btn-save').classList.toggle('hidden', currentTabIndex < 2);
+            // Tombol "Simpan Data" akan muncul di Tab ke-2 (Akademik) dan Tab ke-3 (Info)
+            document.getElementById('btn-save').classList.toggle('hidden', currentTabIndex < 1);
         }
 
         // KONEKSI API
@@ -877,18 +843,10 @@
             };
 
             setDropdownAndLainnya('f-angkatan', data.angkatan);
-            document.getElementById('f-visa').value = data.visa || '';
             document.getElementById('f-nama-id').value = data.nama_id || '';
             document.getElementById('f-nama-ar').value = data.nama_ar || '';
             document.getElementById('stts').value = data.stts || ''; 
             document.getElementById('f-jen-k').value = data.jen_k || ''; 
-            document.getElementById('f-paspor').value = data.paspor || '';
-            
-            let cleanExpired = data.expired || '';
-            if (cleanExpired && typeof cleanExpired === 'string') cleanExpired = cleanExpired.split(/[\sT]+/)[0]; 
-            document.getElementById('f-expired').value = cleanExpired;
-
-            document.getElementById('f-iqamah').value = data.iqamah || '';
             document.getElementById('f-wa').value = data.wa || '';
             document.getElementById('f-jenjang').value = data.jenjang || '';
             setDropdownAndLainnya('f-jurusan', data.jurusan);
@@ -918,14 +876,14 @@
             return {
                 email: currentUserEmail,
                 angkatan: document.getElementById('f-angkatan').value,
-                visa: document.getElementById('f-visa').value,
+                visa: "Program Online",
                 nama_id: document.getElementById('f-nama-id').value,
                 nama_ar: document.getElementById('f-nama-ar').value,
-                paspor: document.getElementById('f-paspor').value,
+                paspor: "",
                 stts: document.getElementById('stts').value, 
                 jen_k: document.getElementById('f-jen-k').value,
-                expired: document.getElementById('f-expired').value,
-                iqamah: document.getElementById('f-iqamah').value,
+                expired: "",
+                iqamah: "",
                 wa: document.getElementById('f-wa').value,
                 jenjang: document.getElementById('f-jenjang').value,
                 jurusan: document.getElementById('f-jurusan').value,
@@ -940,13 +898,13 @@
 
         function confirmSave() {
             const data = getFormData();
+            const exclude = ['visa', 'paspor', 'expired', 'iqamah'];
             for (const key in data) {
-                if (key === 'visa' && data.angkatan !== 'Dirosat') continue;
+                if (exclude.includes(key)) continue;
                 if (!data[key] || data[key].trim() === '') {
                     showDynamicIsland('Terdapat kolom kosong yang wajib diisi!', 'error'); return;
                 }
             }
-            if (data.iqamah.length !== 10) { showDynamicIsland('Raqm Iqamah wajib 10 digit!', 'error'); switchTab('perjalanan'); return; }
             if (data.thalib.length !== 9) { showDynamicIsland('Raqm Thalib wajib 9 digit!', 'error'); switchTab('akademik'); return; }
             if (!data.kerabat_nomor.startsWith('628')) { showDynamicIsland('Nomor Cadangan harus diawali 628', 'error'); switchTab('diri'); return; }
 
@@ -1062,5 +1020,5 @@
         }
     </script>
 </body>
-</html>```
+</html>
 
