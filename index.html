@@ -1,11 +1,11 @@
 <!-- // Created with Musaid Mandub Indonesia - HUMAS -->
 <!DOCTYPE html>
-<html lang="id">
+<hhtmltml lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, ihhtmltminitialnitial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
     <title> PPMI Madinah </title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script srhtmlttps://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- Menggunakan Font Poppins untuk tampilan yang lebih modern -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -192,12 +192,7 @@
                     </div>
                 </div>
 
-                <div class="w-full">
-                    <label class="text-xs font-semibold text-gray-700 mb-1 block">Nomor Saudi Aktif</label>
-                    <input type="text" id="f-saudi" inputmode="numeric" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '')" placeholder="966..." class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-green-400">
-                </div>
-
-                <h3 class="text-sm font-bold text-gray-800 mt-6 mb-4 border-b pb-2 flex items-center gap-2"><i class="fas fa-map-marker-alt text-green-600"></i> Domisili & Tempat Tinggal</h3>
+                <h3 class="text-sm font-bold text-gray-800 mt-6 mb-4 border-b pb-2 flex items-center gap-2"><i class="fas fa-map-marker-alt text-green-600"></i> Asal Daerah (Indonesia)</h3>
                 
                 <div class="w-full">
                     <label class="text-xs font-semibold text-gray-700 mb-1 block">Domisili Indo (Provinsi)</label>
@@ -243,37 +238,18 @@
                         <option value="Papua Barat Daya">Papua Barat Daya</option>
                     </select>
                 </div>
-                <div class="w-full">
-                  <label class="text-xs font-semibold text-gray-700 mb-1 block">Domisili Madinah</label>
-                  <select id="f-dom-madinah" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-green-400 appearance-none">
-                      <option value="" disabled selected>Pilih Domisili</option>
-                      <option value="Sakan Jamiah">Sakan Jamiah</option>
-                      <option value="Robwah">Robwah</option>
-                      <option value="Apartemen Sendiri">Apartemen Sendiri</option>
-                  </select>
-                </div>
-                <div class="grid grid-cols-2 gap-3">
-                    <div class="w-full">
-                        <label class="text-xs font-semibold text-gray-700 mb-1 block">Wihdah</label>
-                        <input type="text" id="f-wihdah" inputmode="numeric" pattern="[0-9]*" maxlength="2" oninput="this.value = this.value.replace(/[^0-9]/g, '')" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-green-400" placeholder="Maks. 2 digit">
-                    </div>
-                    <div class="w-full">
-                        <label class="text-xs font-semibold text-gray-700 mb-1 block">No Kamar</label>
-                        <input type="text" id="f-kamar" inputmode="numeric" pattern="[0-9]*" maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '')" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-green-400" placeholder="Maks. 3 digit">
-                    </div>
-                </div>
 
                 <h3 class="text-sm font-bold text-gray-800 mt-6 mb-4 border-b pb-2 flex items-center gap-2">
-                    <i class="fas fa-heart text-red-500"></i> Informasi Kerabat / Darurat <span class="text-red-500 text-xs ml-1">*Wajib</span>
+                    <i class="fas fa-address-book text-blue-500"></i> Informasi Nomor Cadangan <span class="text-red-500 text-xs ml-1">*Wajib</span>
                 </h3>
                 <div class="w-full">
-                    <label class="text-xs font-semibold text-gray-700 mb-1 block">Nama Kerabat</label>
+                    <label class="text-xs font-semibold text-gray-700 mb-1 block">Nama Pemilik Nomor</label>
                     <input type="text" id="f-kerabat-nama" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-green-400">
                 </div>
                 <div class="grid grid-cols-2 gap-3">
                     <div class="w-full">
                         <label class="text-xs font-semibold text-gray-700 mb-1 block">Hubungan</label>
-                        <input type="text" id="f-kerabat-hub" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-green-400" placeholder="Contoh: Ayah">
+                        <input type="text" id="f-kerabat-hub" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-green-400" placeholder="Contoh: Ayah / Saudara">
                     </div>
                     <div class="w-full">
                         <label class="text-xs font-semibold text-gray-700 mb-1 block">Nomor HP</label>
@@ -339,48 +315,6 @@
                     <select id="f-jurusan-select" onchange="toggleJurusanLainnya()" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-green-400 appearance-none">
                         <option value="" disabled selected>Pilih Jurusan</option>
                         <option value="Syariah">Syariah</option>
-                        <option value="Dakwah">Dakwah</option>
-                        <option value="Hadits">Hadits</option>
-                        <option value="Al Quran">Al Quran</option>
-                        <option value="Lughah">Lughah</option>
-                        <option value="Andzimah">Andzimah</option>
-                        <option value="A'mal">A'mal</option>
-                        <option value="Teknik (Handasah)">Teknik (Handasah)</option>
-                        <option value="Informatika">Informatika</option>
-                        <option value="MIPA ('Ulum)">MIPA ('Ulum)</option>
-                        <option value="Mahad Lughoh">Mahad Lughoh</option>
-                        <option value="Al-Fiqh">Al-Fiqh</option>
-                        <option value="Ushulul Fiqh">Ushulul Fiqh</option>
-                        <option value="Ad-Dirasat Al-Qadhaiyyah">Ad-Dirasat Al-Qadhaiyyah</option>
-                        <option value="Al-Anzhimal">Al-Anzhimal</option>
-                        <option value="Al-Iqtishad">Al-Iqtishad</option>
-                        <option value="Ad-Da'wah">Ad-Da'wah</option>
-                        <option value="Al-Aqidah">Al-Aqidah</option>
-                        <option value="Ad-Da'wah wat-Tsaqafah">Ad-Da'wah wat-Tsaqafah</option>
-                        <option value="Al-Firaq wal Maqalat">Al-Firaq wal Maqalat</option>
-                        <option value="Al-Adyan">Al-Adyan</option>
-                        <option value="Al-Qira'at">Al-Qira'at</option>
-                        <option value="At-Tafsir">At-Tafsir</option>
-                        <option value="Fiqhus Sunnah">Fiqhus Sunnah</option>
-                        <option value="Ulumul Hadits">Ulumul Hadits</option>
-                        <option value="Al-Adab wal Balaghah">Al-Adab wal Balaghah</option>
-                        <option value="Al-Lughawiyyat">Al-Lughawiyyat</option>
-                        <option value="Maharat fil Lughah Al-Arabiyyah (Diploma)">Maharat fil Lughah Al-Arabiyyah (Diploma)</option>
-                        <option value="Al-I'lam wal Ittishal">Al-I'lam wal Ittishal</option>
-                        <option value="Ushulut Tarbiyah Al-Islamiyyah">Ushulut Tarbiyah Al-Islamiyyah</option>
-                        <option value="Al-Idaratut Tarbawiyyah">Al-Idaratut Tarbawiyyah</option>
-                        <option value="Al-Manahij wa Thuruqut Tadris">Al-Manahij wa Thuruqut Tadris</option>
-                        <option value="Ilmun Nafsi">Ilmun Nafsi</option>
-                        <option value="At-Tarbiyatul Muqaranah">At-Tarbiyatul Muqaranah</option>
-                        <option value="At-Tsaqafatul Islamiyyah">At-Tsaqafatul Islamiyyah</option>
-                        <option value="At-Taujih wal Irsyad (Diploma)">At-Taujih wal Irsyad (Diploma)</option>
-                        <option value="At-Tarikh wal (Al-Hadharah)">At-Tarikh wal (Al-Hadharah)</option>
-                        <option value="Ar-Riyadhiyyat">Ar-Riyadhiyyat</option>
-                        <option value="Kimia">Kimia</option>
-                        <option value="Al-Fizya">Al-Fizya</option>
-                        <option value="Al-Hasibul Ali">Al-Hasibul Ali</option>
-                        <option value="Al-Handasah">Al-Handasah</option>
-                        <option value="Ta'limul Lughah Al-Arabiyyah">Ta'limul Lughah Al-Arabiyyah</option>
                         <option value="Lainnya">Lainnya (Isi Sendiri)...</option>
                     </select>
                     <input type="text" id="f-jurusan-lainnya" placeholder="Tuliskan jurusan Anda di sini..." class="hidden mt-2 w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-green-400">
@@ -683,6 +617,7 @@
                 <div>
                     <h3 class="text-sm font-bold text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
                         <i class="fas fa-hashtag text-purple-500"></i> Sosial Media PPMI Madinah
+                    </h3>
                     <div class="flex flex-wrap gap-4 justify-center">
                         <a href="https://www.instagram.com/ppmimadinah" target="_blank" class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white flex items-center justify-center text-xl shadow-lg shadow-pink-500/30 hover:-translate-y-1 hover:shadow-xl transition-all">
                             <i class="fab fa-instagram"></i>
@@ -955,13 +890,9 @@
 
             document.getElementById('f-iqamah').value = data.iqamah || '';
             document.getElementById('f-wa').value = data.wa || '';
-            document.getElementById('f-saudi').value = data.saudi || '';
             document.getElementById('f-jenjang').value = data.jenjang || '';
             setDropdownAndLainnya('f-jurusan', data.jurusan);
             document.getElementById('f-dom-indo').value = data.dom_indo || '';
-            document.getElementById('f-dom-madinah').value = data.dom_madinah || '';
-            document.getElementById('f-wihdah').value = data.wihdah || '';
-            document.getElementById('f-kamar').value = data.kamar || '';
             document.getElementById('f-thalib').value = data.thalib || currentThalib; // Prefer current
             document.getElementById('f-alumni').value = data.alumni || '';
             document.getElementById('f-kerabat-nama').value = data.kerabat_nama || '';
@@ -996,13 +927,9 @@
                 expired: document.getElementById('f-expired').value,
                 iqamah: document.getElementById('f-iqamah').value,
                 wa: document.getElementById('f-wa').value,
-                saudi: document.getElementById('f-saudi').value,
                 jenjang: document.getElementById('f-jenjang').value,
                 jurusan: document.getElementById('f-jurusan').value,
                 dom_indo: document.getElementById('f-dom-indo').value,
-                dom_madinah: document.getElementById('f-dom-madinah').value,
-                wihdah: document.getElementById('f-wihdah').value,
-                kamar: document.getElementById('f-kamar').value,
                 thalib: document.getElementById('f-thalib').value,
                 alumni: document.getElementById('f-alumni').value,
                 kerabat_nama: document.getElementById('f-kerabat-nama').value,
@@ -1021,7 +948,7 @@
             }
             if (data.iqamah.length !== 10) { showDynamicIsland('Raqm Iqamah wajib 10 digit!', 'error'); switchTab('perjalanan'); return; }
             if (data.thalib.length !== 9) { showDynamicIsland('Raqm Thalib wajib 9 digit!', 'error'); switchTab('akademik'); return; }
-            if (!data.kerabat_nomor.startsWith('628')) { showDynamicIsland('Nomor Kerabat harus diawali 628', 'error'); switchTab('diri'); return; }
+            if (!data.kerabat_nomor.startsWith('628')) { showDynamicIsland('Nomor Cadangan harus diawali 628', 'error'); switchTab('diri'); return; }
 
             const m = document.getElementById('confirm-modal');
             const b = document.getElementById('confirm-box');
@@ -1135,4 +1062,5 @@
         }
     </script>
 </body>
-</html>
+</html>```
+
